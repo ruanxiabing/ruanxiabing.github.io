@@ -49,11 +49,54 @@
     🌐
   </button>
   <div class="lang-menu" id="langMenu">
-    <a href="index_en.html">English</a>
-    <a href="index_fr.html">Français</a>
-    <a href="index_cn.html">中文</a>
+    <a href="index.html">English</a>
+    <a href="fr.html">Français</a>
+    <a href="zh.html">中文</a>
   </div>
 </div>
+
+  .language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-family: sans-serif;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.lang-btn:hover {
+  transform: scale(1.2);
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.lang-menu a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.lang-menu a:hover {
+  background-color: #f0f0f0;
+}
+
 
 
   <section id="hello">
