@@ -99,6 +99,20 @@
 }
 </style>
 
+  <script>
+function toggleMenu() {
+  const menu = document.getElementById("langMenu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+// 点击页面其他地方时关闭菜单
+window.addEventListener('click', function(e) {
+  if (!e.target.closest('.language-switcher')) {
+    document.getElementById("langMenu").style.display = "none";
+  }
+});
+</script>
+
 
   <section id="hello">
     <h2>Hello!</h2>
