@@ -120,6 +120,21 @@ transform: scale(1.25);
 }
 </style>
 
+  <!-- JS -->
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("langMenu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+// 点击页面其他地方时关闭菜单
+window.addEventListener('click', function(e) {
+  if (!e.target.closest('.language-switcher')) {
+    document.getElementById("langMenu").style.display = "none";
+  }
+});
+</script>
+
   <section id="hello">
     <h2>Bonjour !</h2>
     <p>Je suis une étudiante doctorale dans l'équipe <a href = "https://irma.math.unistra.fr/teams/art.html" target="_blank">Algèbre, Représentations, Topologie (ART)</a> de <a href="https://irma.math.unistra.fr/index.html" target="_blank">Institut de recherche mathématique avancée (IRMA)</a>, <a href="https://en.unistra.fr/" target="_blank">Université de Strasbourg</a> à Strasbourg, France. Mon directeur est <a href="https://irma.math.unistra.fr/~dotsenko/" target="_blank">Vladimir Dotsenko</a>. Mes recherches portent sur l’algèbre homologique, les opérades algébriques et les domaines connexes.</p>
