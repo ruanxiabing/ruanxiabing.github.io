@@ -69,23 +69,30 @@
 <style>
 .header {
   display: flex;
-  justify-content: space-between; /* 左右分布 */
-  align-items: center;            /* 垂直居中 */
+  align-items: center;      /* 垂直居中 */
+  justify-content: center;  /* 居中整个标题组（如果想左对齐可改为 flex-start） */
   padding: 15px 20px;
   background-color: #f5f5f5;
   border-bottom: 1px solid #ddd;
-  position: relative; /* 为 absolute 子元素提供定位基准 */
+  position: relative;
 }
 
-/* -------------------- 标题样式 -------------------- */
-.header h1 {
+/* 标题 + 按钮的组合容器 */
+.title-group {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  gap: 8px;            /* 标题与按钮之间的间距 */
+}
+
+/* 标题样式 */
+.title-group h1 {
   font-size: 1.6rem;
   margin: 0;
   color: #333;
-  text-align: left;
+  white-space: nowrap; /* 避免标题换行 */
 }
 
-/* -------------------- 语言切换器按钮 -------------------- */
+/* 语言切换按钮样式 */
 .language-switcher {
   position: relative;
 }
@@ -93,9 +100,9 @@
 .lang-btn {
   background: none;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   cursor: pointer;
-  padding: 6px 8px;
+  padding: 4px 6px;
   border-radius: 6px;
   transition: background 0.2s ease;
 }
@@ -104,12 +111,12 @@
   background-color: #e0e0e0;
 }
 
-/* -------------------- 语言菜单样式 -------------------- */
+/* 下拉菜单样式 */
 .lang-menu {
-  display: none; /* 默认隐藏 */
+  display: none;
   position: absolute;
-  top: 40px;
-  right: 0;
+  top: 32px;
+  left: 0;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -123,35 +130,21 @@
   padding: 8px 12px;
   text-decoration: none;
   color: #333;
-  transition: background 0.2s ease;
 }
 
 .lang-menu a:hover {
   background-color: #f0f0f0;
 }
 
-/* -------------------- 响应式布局 -------------------- */
+/* 响应式微调 */
 @media (max-width: 600px) {
-  .header {
-    flex-direction: column;   /* 垂直排列 */
-    align-items: flex-start;  /* 左对齐 */
-    padding: 12px 16px;
-  }
-
-  .header h1 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
+  .title-group h1 {
+    font-size: 1.2rem;
   }
 
   .lang-btn {
-    font-size: 1.2rem;
-    padding: 4px 6px;
-  }
-
-  .lang-menu {
-    top: 36px;
-    right: auto;
-    left: 0;
+    font-size: 1.1rem;
+    padding: 2px 4px;
   }
 }
 </style>
