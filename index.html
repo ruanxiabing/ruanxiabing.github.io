@@ -69,34 +69,30 @@
 <style>
 .header {
   display: flex;
-  align-items: center;      /* 垂直居中 */
-  justify-content: center;  /* 居中整个标题组（如果想左对齐可改为 flex-start） */
-  padding: 15px 20px;
+  align-items: center;
+  justify-content: center;  /* 居中整个标题区，如果想靠左改成 flex-start */
   background-color: #f5f5f5;
   border-bottom: 1px solid #ddd;
-  position: relative;
-}
-
-/* 标题 + 按钮的组合容器 */
-.title-group {
-  display: flex;
-  align-items: center; /* 垂直居中 */
-  gap: 8px;            /* 标题与按钮之间的间距 */
+  padding: 15px 20px;
+  white-space: nowrap; /* 防止换行 */
 }
 
 /* 标题样式 */
-.title-group h1 {
+.header h1 {
   font-size: 1.6rem;
   margin: 0;
   color: #333;
-  white-space: nowrap; /* 避免标题换行 */
+  display: inline; /* 关键：让标题与按钮同为行内元素 */
 }
 
-/* 语言切换按钮样式 */
+/* 语言切换按钮容器 */
 .language-switcher {
+  display: inline-block;
   position: relative;
+  margin-left: 10px; /* 标题与按钮之间的距离 */
 }
 
+/* 按钮样式 */
 .lang-btn {
   background: none;
   border: none;
@@ -138,13 +134,12 @@
 
 /* 响应式微调 */
 @media (max-width: 600px) {
-  .title-group h1 {
+  .header h1 {
     font-size: 1.2rem;
   }
 
   .lang-btn {
     font-size: 1.1rem;
-    padding: 2px 4px;
   }
 }
 </style>
