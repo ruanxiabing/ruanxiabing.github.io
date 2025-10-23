@@ -63,13 +63,15 @@
   background-color: #f5f5f5;
   border-bottom: 1px solid #ddd;
   padding: 15px 20px;
+  justify-content: center;   /* 水平居中整个标题组 */
+  align-items: center;       /* 垂直居中 */
   text-align: center; /* 整体居中显示，可改为 left/right */
   white-space: nowrap; /* 防止自动换行 */
 }
 
 /* 标题文字 */
 .header h1 {
-  display: inline;        /* 让标题成为行内元素 */
+  display: inline-block;        /* 让标题成为行内元素 */
   font-size: 1.6rem;
   color: #333;
   margin: 0;
