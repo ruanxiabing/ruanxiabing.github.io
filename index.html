@@ -43,17 +43,21 @@
     <p>📧 xruan[at]unistra[dot]fr</p>
 
   </header>
-  <div class="language-switcher">
-    <button class="lang-btn" onclick="toggleMenu()">🌐</button>
-    <div id="languageMenu" class="language-menu">
-      <a href="index.html">English</a>
-      <a href="fr.html">Français</a>
-      <a href="zh.html">中文</a>
-    </div>
+<!-- 语言切换按钮 -->
+<div class="language-switcher">
+  <button class="lang-btn" onclick="toggleMenu()">
+    🌐
+  </button>
+  <div class="lang-menu" id="langMenu">
+    <a href="index.html">English</a>
+    <a href="fr.html">Français</a>
+    <a href="zh.html">中文</a>
   </div>
+</div>
 
+<!-- CSS -->
 <style>
-  .language-switcher {
+.language-switcher {
   position: fixed;
   top: 5%;
   right: 5%;
@@ -63,7 +67,7 @@
 .lang-btn {
   background: none;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -96,7 +100,8 @@
 }
 </style>
 
-  <script>
+<!-- JS -->
+<script>
 function toggleMenu() {
   const menu = document.getElementById("langMenu");
   menu.style.display = (menu.style.display === "block") ? "none" : "block";
@@ -109,6 +114,7 @@ window.addEventListener('click', function(e) {
   }
 });
 </script>
+
 
 
   <section id="hello">
