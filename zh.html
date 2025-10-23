@@ -43,6 +43,83 @@
 
   </header>
 
+  <!-- 语言切换按钮 -->
+<div class="language-switcher">
+  <button class="lang-btn" onclick="toggleMenu()">
+    🌐
+  </button>
+  <div class="lang-menu" id="langMenu">
+    <a href="index.html">English</a>
+    <a href="fr.html">Français</a>
+    <a href="zh.html">中文</a>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+
+
+
+/* 按钮样式 */
+.language-switcher {
+  position: absolute;
+  top: 4%;
+  right: 10%;
+  font-size: 1.2rem;
+  background: #f9f9f9;
+  border-radius: 50%;
+  padding: 0.3em;
+  cursor: pointer;
+}
+
+  .lang-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.lang-btn:hover {
+transform: scale(1.25); 
+}
+
+/* 下拉菜单 */
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 120px;
+  z-index: 10;
+}
+
+.lang-menu a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+.lang-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* 响应式调整：只缩小字号，不改布局 */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.2rem;
+  }
+  .lang-btn {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
   <section id="hello">
     <h2>你好！</h2>
     <p>我是位于法国<a href="https://en.unistra.fr/" target="_blank">斯特拉斯堡大学</a><a href="https://irma.math.unistra.fr/index.html" target="_blank">高等数学研究所</a>的<a href = "https://irma.math.unistra.fr/teams/art.html" target="_blank">代数表示论拓扑</a>组的在读博士生。我的导师是<a href="https://irma.math.unistra.fr/~dotsenko/" target="_blank">弗拉基米尔·多岑科</a>。我对同调代数、算筹理论等相关领域感兴趣。
