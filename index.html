@@ -57,34 +57,54 @@
 
 <!-- CSS -->
 <style>
+.header {
+  display: flex;
+  justify-content: space-between; /* 左右分布 */
+  align-items: center;            /* 垂直居中 */
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  position: relative; /* 为 absolute 子元素提供定位基准 */
+}
+
+/* -------------------- 标题样式 -------------------- */
+.header h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #333;
+  text-align: left;
+}
+
+/* -------------------- 语言切换器按钮 -------------------- */
 .language-switcher {
-  position: absolute;
-  top: 5%;
-  right: 30%;
-  font-family: sans-serif;
+  position: relative;
 }
 
 .lang-btn {
   background: none;
   border: none;
-  font-size: 30px;
+  font-size: 1.4rem;
   cursor: pointer;
-  transition: transform 0.2s;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
 }
 
 .lang-btn:hover {
-  transform: scale(1.2);
+  background-color: #e0e0e0;
 }
 
+/* -------------------- 语言菜单样式 -------------------- */
 .lang-menu {
-  display: none;
+  display: none; /* 默认隐藏 */
   position: absolute;
+  top: 40px;
   right: 0;
-  margin-top: 8px;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 120px;
   z-index: 10;
 }
 
@@ -93,10 +113,36 @@
   padding: 8px 12px;
   text-decoration: none;
   color: #333;
+  transition: background 0.2s ease;
 }
 
 .lang-menu a:hover {
   background-color: #f0f0f0;
+}
+
+/* -------------------- 响应式布局 -------------------- */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;   /* 垂直排列 */
+    align-items: flex-start;  /* 左对齐 */
+    padding: 12px 16px;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .lang-btn {
+    font-size: 1.2rem;
+    padding: 4px 6px;
+  }
+
+  .lang-menu {
+    top: 36px;
+    right: auto;
+    left: 0;
+  }
 }
 </style>
 
