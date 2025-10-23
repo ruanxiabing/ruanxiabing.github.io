@@ -11,6 +11,16 @@
       margin: 40px auto;
       padding: 0 20px;
     }
+    header {
+  width: 100%;
+  padding: 1rem 2rem;        /* 上下1rem，左右2rem */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 下方阴影 */
+  display: flex;             /* 使用 flex 排列内容 */
+  align-items: center;       /* 垂直居中 */
+  justify-content: space-between; /* 左右两端对齐 */
+  position: relative;        /* 给子元素绝对定位提供参考 */
+  z-index: 100;              /* 保证在最上层 */
+}
     nav a {
       margin: 0 10px;
       text-decoration: none;
@@ -35,13 +45,7 @@
 <body>
   <header>
 <h1 class="section-title">
-  Xiabing Ruan's Mathematical Page</h1><div class="language-switcher"><button class="lang-btn" onclick="toggleMenu()">🌐</button>
-  <div class="lang-menu" id="langMenu">
-    <a href="index.html">English</a>
-    <a href="fr.html">Français</a>
-    <a href="zh.html">中文</a>
-  </div>
-</div>
+  Xiabing Ruan's Mathematical Page</h1>
     <p>📧 xruan[at]unistra[dot]fr</p>
 
   </header>
@@ -59,24 +63,6 @@
 
 <!-- CSS -->
 <style>
-.header {
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #ddd;
-  padding: 15px 20px;
-  justify-content: center;   /* 水平居中整个标题组 */
-  align-items: center;       /* 垂直居中 */
-  text-align: center; /* 整体居中显示，可改为 left/right */
-  white-space: nowrap; /* 防止自动换行 */
-}
-
-/* 标题文字 */
-.header h1 {
-  display: inline-block;        /* 让标题成为行内元素 */
-  font-size: 1.6rem;
-  color: #333;
-  margin: 0;
-  vertical-align: middle; /* 垂直对齐按钮 */
-}
 
 /* 按钮容器 */
 .language-switcher {
@@ -87,16 +73,17 @@
 }
 
 /* 按钮样式 */
-.lang-btn {
-  background: none;
-  border: none;
-  font-size: 1.3rem;
+.language-switcher {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-size: 1.2rem;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 0.3em;
   cursor: pointer;
-  padding: 4px 6px;
-  border-radius: 6px;
-  transition: background 0.2s ease;
 }
-
 .lang-btn:hover {
   background-color: #e0e0e0;
 }
