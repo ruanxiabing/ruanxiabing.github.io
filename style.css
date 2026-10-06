@@ -17,9 +17,9 @@
 .paper-details summary::-webkit-details-marker{display:none}
 .paper-details summary::after{content:'+';font-family:var(--sans);font-size:23px;color:#48765a;flex:none}
 .paper-details[open] summary::after{content:'−'}
-.paper-details summary:hover .paper-title{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em}
+.paper-details .paper-title{text-decoration:underline;text-decoration-color:#739e81;text-decoration-thickness:1px;text-underline-offset:.16em}
+.paper-details summary:hover .paper-title{text-decoration-color:currentColor;text-decoration-thickness:2px}
 .paper-details summary:focus-visible{outline:2px solid #48765a;outline-offset:5px}
 .abstract{padding:18px 0 2px;border-bottom:1px solid #cfdbcf}
-.abstract-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5b7a63}
-.abstract p{margin:8px 0 18px!important;color:var(--ink)!important;font-size:16px!important;line-height:1.75}
+.abstract p{margin:0 0 18px!important;color:var(--ink)!important;font-size:16px!important;line-height:1.75}
 @media(max-width:600px){.hero-bio{font-size:16px}.paper-details summary{font-size:24px}}
